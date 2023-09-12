@@ -1,33 +1,45 @@
+// import { useState } from 'react'
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Blogs from './assets/component/blogs/blogs'
+import BooksMark from './assets/component/booksmark/booksmark'
+import Header from './assets/component/header/header'
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const [bookMarks, setBookMarks] = useState([]);
+  const [readingTime, setReadingTime] = useState(0)
+
+  const bookHandler = blog => {
+    const newBookMark = [...bookMarks, blog];
+    setBookMarks(newBookMark);
+  }
+
+  const handleReadingTime = (id, reading_time) => {
+    setReadingTime(readingTime + reading_time)
+
+    // remove items
+    // console.log('remove', id);
+    const setBookMark = bookMarks.filter((book) => book.id !== id)
+    setBookMarks(setBookMark)
+  }
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <Header></Header>
+      <div className='container mx-auto flex gap-5'>
+        <Blogs
+          bookHandler={bookHandler}
+          handleReadingTime={handleReadingTime}
+        ></Blogs>
+
+        <div className="bg-gray-300 p-4 w-[30%]">
+          <BooksMark
+            bookMarks={bookMarks}
+            readingTime={readingTime}
+          ></BooksMark>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }

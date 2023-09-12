@@ -1,0 +1,58 @@
+[
+    {
+        "id": "1",
+        "author_name": "John Doe",
+        "author_img": "https://i.ibb.co/xLRNyHd/boy1.png",
+        "cover": "https://i.ibb.co/jhQ0hTb/1.jpg",
+        "title": "Exploring the Wilderness",
+        "reading_time": 8,
+        "posted_date": "2023-09-10",
+        "hashtags": [
+            "adventure",
+            "travel",
+            "nature"
+        ]
+    },
+    {
+        "id": "2",
+        "author_name": "Alice Johnson",
+        "author_img": "https://i.ibb.co/XCsqwyY/boy2.jpg",
+        "cover": "https://i.ibb.co/pQZgcr1/2.png",
+        "title": "Cooking Adventures",
+        "reading_time": 12,
+        "posted_date": "2023-09-11",
+        "hashtags": [
+            "food",
+            "cooking",
+            "recipes"
+        ]
+    },
+    {
+        "id": "3",
+        "author_name": "Emily Wilson",
+        "author_img": "https://i.ibb.co/ncKyP4v/girl1.jpg",
+        "cover": "https://i.ibb.co/0Vmkj9h/3.png",
+        "title": "A Healthy Lifestyle",
+        "reading_time": 6,
+        "posted_date": "2023-09-12",
+        "hashtags": [
+            "fitness",
+            "health",
+            "wellness"
+        ]
+    },
+    {
+        "id": "4",
+        "author_name": "Michael Brown",
+        "author_img": "https://i.ibb.co/Xjbcbbk/girl2.jp",
+        "cover": "https://i.ibb.co/YjWyTzj/4.jpg",
+        "title": "Cutting-Edge Technology",
+        "reading_time": 9,
+        "posted_date": "2023-09-13",
+        "hashtags": [
+            "technology",
+            "innovation",
+            "future"
+        ]
+    }
+]
